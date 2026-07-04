@@ -5,7 +5,7 @@ x-airflow-env: &airflow-env
   AIRFLOW__CORE__LOAD_EXAMPLES: "False"
   AIRFLOW__CORE__EXECUTOR: LocalExecutor
   AIRFLOW__DATABASE__SQL_ALCHEMY_CONN: postgresql+psycopg2://airflow:airflow@postgres:5432/airflow
-  AIRFLOW__CORE__FERNET_KEY: "RM89t2v9HJi7WDWeaOcmkzu4V7ke_772w8XAJ6mlBAA="
+  AIRFLOW__CORE__FERNET_KEY: ${AIRFLOW_FERNET_KEY}
   AIRFLOW__CORE__DAGS_ARE_PAUSED_AT_CREATION: "True"
   PYTHONPATH: /opt/airflow/project
   _PIP_ADDITIONAL_REQUIREMENTS: requests==2.32.3 beautifulsoup4==4.12.3
